@@ -46,7 +46,7 @@ $tasks = $db->query($sql);
 
 <div class="container mt-4">
 
-    <h3 class="mb-3">📋 Task Management</h3>
+    <h3 class="mb-3"><i class="fa-solid fa-list-check"></i> Task Management</h3>
 
     <!-- SEARCH + FILTER -->
     <form method="get" action="index.php" class="row mb-3">
@@ -77,11 +77,11 @@ $tasks = $db->query($sql);
         </div>
 
         <div class="col-md-2">
-            <button class="btn btn-primary w-100">Filter</button>
+            <button class="btn btn-primary w-100">Filter <i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
 
         <div class="col-md-2">
-            <a href="./?page=task" class="btn btn-dark w-100">Reset</a>
+            <a href="./?page=task" class="btn btn-dark w-100">Reset <i class="fa-solid fa-arrows-rotate"></i></a>
         </div>
 
     </form>
@@ -99,7 +99,7 @@ $tasks = $db->query($sql);
             </tr>
         </thead>
 
-        <tbody >
+        <tbody>
             <?php
             $i = 1;
             while ($row = $tasks->fetch_assoc()) {
@@ -117,10 +117,10 @@ $tasks = $db->query($sql);
 
                     <td>
                         <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#edit<?php echo $row['id']; ?>">
-                            Edit
+                            Edit <i class="fa-solid fa-pen-to-square"></i>
                         </button>
                         <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#delete<?php echo $row['id']; ?>">
-                            Delete
+                            Delete <i class="fa-solid fa-trash-can"></i>
                         </button>
                     </td>
                 </tr>
@@ -131,7 +131,7 @@ $tasks = $db->query($sql);
                             <form method="post" action="./?page=edit_task">
 
                                 <div class="modal-header">
-                                    <h5 class="modal-title">Edit Task</h5>
+                                    <h5 class="modal-title"> Edit Task <i class="fa-solid fa-pen-to-square"></i></h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                 </div>
 
@@ -209,7 +209,7 @@ $tasks = $db->query($sql);
                             <form method="post" action="./?page=delete_task">
 
                                 <div class="modal-header">
-                                    <h5 class="modal-title">Delete Task</h5>
+                                    <h5 class="modal-title"><i class="fa-solid fa-trash-can"></i> Delete Task </h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                 </div>
 
@@ -246,4 +246,3 @@ $tasks = $db->query($sql);
     </nav>
 
 </div>
-

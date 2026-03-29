@@ -40,7 +40,7 @@ $completed_count = $db->query("SELECT COUNT(*) AS c FROM tasks WHERE user_id=$us
 
     <!-- Header -->
     <div class="d-flex justify-content-between align-items-center mb-4">
-        <h2>My Calendar Dashboard</h2>
+        <h2><i class="fa-solid fa-calendar"></i> My Calendar Dashboard</h2>
     </div>
 
 
@@ -61,12 +61,12 @@ $completed_count = $db->query("SELECT COUNT(*) AS c FROM tasks WHERE user_id=$us
 
     <!-- Filters -->
     <div class="d-flex justify-content-between align-items-center mb-3">
-        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addTaskModal">Add New Task</button>
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addTaskModal"><i class="fa-solid fa-file-circle-plus"></i> Add New Task</button>
 
         <form method="get" class="d-flex">
             <input type="hidden" name="page" value="dashboard">
             <select name="category" class="form-select me-2">
-                <option value="">All Categories</option>
+                <option value=""> All Categories</option>
                 <option value="Study" <?php if ($category == 'Study') echo 'selected'; ?>>Study</option>
                 <option value="Freelance" <?php if ($category == 'Freelance') echo 'selected'; ?>>Freelance</option>
                 <option value="Personal" <?php if ($category == 'Personal') echo 'selected'; ?>>Personal</option>
@@ -76,7 +76,7 @@ $completed_count = $db->query("SELECT COUNT(*) AS c FROM tasks WHERE user_id=$us
                 <option value="Pending" <?php if ($status == 'Pending') echo 'selected'; ?>>Pending</option>
                 <option value="Completed" <?php if ($status == 'Completed') echo 'selected'; ?>>Completed</option>
             </select>
-            <button type="submit" class="btn btn-dark">Filter</button>
+            <button type="submit" class="btn btn-dark">Filter </button>
         </form>
     </div>
 
@@ -95,8 +95,8 @@ $completed_count = $db->query("SELECT COUNT(*) AS c FROM tasks WHERE user_id=$us
                         <span class="badge bg-<?php echo $row['status'] == 'Pending' ? 'danger' : 'success'; ?>"><?php echo $row['status']; ?></span>
                         <p class="mt-2"><small><?php echo $row['start_time']; ?> → <?php echo $row['end_time']; ?></small></p>
                         <!-- Edit/Delete Buttons trigger modals -->
-                        <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#editTaskModal<?php echo $row['id']; ?>">Edit</button>
-                        <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteTaskModal<?php echo $row['id']; ?>">Delete</button>
+                        <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#editTaskModal<?php echo $row['id']; ?>">Edit <i class="fa-solid fa-pen-to-square"></i></button>
+                        <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteTaskModal<?php echo $row['id']; ?>">Delete <i class="fa-solid fa-trash-can"></i></button>
                     </div>
                 </div>
             </div>
