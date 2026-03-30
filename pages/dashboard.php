@@ -107,7 +107,7 @@ $completed_count = $db->query("SELECT COUNT(*) AS c FROM tasks WHERE user_id=$us
                     <div class="modal-content">
                         <form method="post" action="./?page=edit_task">
                             <div class="modal-header">
-                                <h5 class="modal-title">Edit Task</h5>
+                                <h5 class="modal-title">Edit Task <i class="fa-solid fa-pen-to-square"></i></h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                             </div>
                             <div class="modal-body">
@@ -166,7 +166,7 @@ $completed_count = $db->query("SELECT COUNT(*) AS c FROM tasks WHERE user_id=$us
                     <div class="modal-content">
                         <form method="post" action="./?page=delete_task">
                             <div class="modal-header">
-                                <h5 class="modal-title">Delete Task</h5>
+                                <h5 class="modal-title"><i class="fa-solid fa-trash-can"></i> Delete Task </h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                             </div>
                             <div class="modal-body">
