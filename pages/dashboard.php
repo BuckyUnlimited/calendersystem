@@ -104,7 +104,7 @@ $completed_count = $db->query("SELECT COUNT(*) AS c FROM tasks WHERE user_id=$us
             <!-- Edit Task Modal -->
             <div class="modal fade" id="editTaskModal<?php echo $row['id']; ?>" tabindex="-1">
                 <div class="modal-dialog">
-                    <div class="modal-content">
+                    <div class="modal-content text-dark">
                         <form method="post" action="./?page=edit_task">
                             <div class="modal-header">
                                 <h5 class="modal-title">Edit Task <i class="fa-solid fa-pen-to-square"></i></h5>
@@ -166,10 +166,10 @@ $completed_count = $db->query("SELECT COUNT(*) AS c FROM tasks WHERE user_id=$us
                     <div class="modal-content">
                         <form method="post" action="./?page=delete_task">
                             <div class="modal-header">
-                                <h5 class="modal-title"><i class="fa-solid fa-trash-can"></i> Delete Task </h5>
+                                <h5 class="modal-title text-dark"><i class="fa-solid fa-trash-can"></i> Delete Task </h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                             </div>
-                            <div class="modal-body">
+                            <div class="modal-body text-dark">
                                 <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
                                 <p>Are you sure you want to delete "<strong><?php echo $row['title']; ?></strong>"?</p>
                             </div>
@@ -192,15 +192,15 @@ $completed_count = $db->query("SELECT COUNT(*) AS c FROM tasks WHERE user_id=$us
         <div class="modal-content">
             <form method="post" action="./?page=add_task">
                 <div class="modal-header">
-                    <h5 class="modal-title">Add New Task</h5>
+                    <h5 class="modal-title text-dark">Add New Task</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="mb-3">
+                    <div class="mb-3 text-dark">
                         <label>Title</label>
                         <input type="text" name="title" class="form-control" required>
                     </div>
-                    <div class="mb-3">
+                    <div class="mb-3 text-dark">
                         <label>Description</label>
                         <textarea name="description" class="form-control"></textarea>
                     </div>

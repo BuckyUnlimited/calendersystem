@@ -126,7 +126,7 @@ $tasks = $db->query($sql);
                 </tr>
                 <div class="modal fade" id="edit<?php echo $row['id']; ?>" tabindex="-1">
                     <div class="modal-dialog">
-                        <div class="modal-content">
+                        <div class="modal-content text-dark">
 
                             <form method="post" action="./?page=edit_task">
 
@@ -204,7 +204,7 @@ $tasks = $db->query($sql);
                 </div>
                 <div class="modal fade" id="delete<?php echo $row['id']; ?>" tabindex="-1">
                     <div class="modal-dialog">
-                        <div class="modal-content">
+                        <div class="modal-content text-dark">
 
                             <form method="post" action="./?page=delete_task">
 
